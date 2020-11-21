@@ -9,6 +9,7 @@ public void setup()
   {
     nightSky[i] = new Star();
   }
+  myXSpeed = 0;
 }
 public void draw() 
 {
