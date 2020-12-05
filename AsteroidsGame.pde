@@ -1,6 +1,7 @@
-//your variable declarations here
 Spaceship bob = new Spaceship();
 Star[] nightSky = new Star[200];
+//Asteroid joe = new Asteroid();
+ArrayList <Asteroid> joe=new ArrayList <Asteroid>();
 public void setup() 
 {
   size(400, 400);
@@ -9,13 +10,27 @@ public void setup()
   {
     nightSky[i] = new Star();
   }
-   myXSpeed = 0.5;
+  for (int i = 0; i < 20; i ++){
+    joe.add(new Asteroid());
+  }
+   //myXSpeed = 0.5;
 }
 public void draw() 
 {
   background(0);
   bob.move();
   bob.show();
+  for (int i = 0; i < joe.size(); i ++){
+  joe.get(i).show();
+  joe.get(i).move();
+   if (dist((float)(bob.getX()), (float)(bob.getY()), (float)(joe.get(i).getX()), (float)(joe.get(i).getY())) < 20){
+   joe.remove(i);
+  }
+}
+//  for (int i =0; i<joe.size(); i++){
+     //joe.show();
+     //super.move();
+//  }
   for (int i = 0; i < nightSky.length; i ++)
   {
     nightSky[i].show();
