@@ -28,6 +28,7 @@ public void draw()
   joe.get(i).show();
   joe.get(i).move();
    if (dist((float)(bob.getX()), (float)(bob.getY()), (float)(joe.get(i).getX()), (float)(joe.get(i).getY())) < 20){
+   joe.remove(i);
    life = life - 1;
   }
 }
