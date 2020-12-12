@@ -20,7 +20,7 @@ public void move ()
     
   }   
   public void show(){
-    fill(myColor);
+    fill(255);
     ellipse((float)myCenterX, (float)myCenterY, 7, 7);
   }
   public double getX(){
